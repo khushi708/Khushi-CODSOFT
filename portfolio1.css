@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #282c35; /* Dark background color */
+    color: #fff; /* Light text color */
+}
+
+.portfolio-container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+}
+
+.navlist {
+    display: flex;
+    gap: 3.5rem;
+    height: 15vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+}
+
+.navlist li {
+    list-style: none;
+}
+
+.navlist li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: #ff6f61; /* Funky orange */
+    position: relative;
+    transition: color 0.3s;
+}
+
+.navlist li a:hover {
+    color: #5dade2; /* Sky blue */
+}
+
+.left-container,
+.right-container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.left-container {
+    background: #ff6f61; /* Funky orange */
+    width: 70%;
+    padding-left: 3rem;
+}
+
+.right-container {
+    background: linear-gradient(-45deg, #5dade2, #654ea3 70%); /* Gradient with sky blue and dark purple */
+    width: 30%;
+}
+
+.icons .fa-brands {
+    color: #fff; /* White */
+    font-size: 1.7rem;
+    transition: color 0.3s;
+}
+
+.icons .fa-brands:hover {
+    color: #5dade2; /* Sky blue */
+    transform: rotate(360deg);
+}
+
+.icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.content {
+    margin-left: 4rem;
+}
+
+.content .intro {
+    font-size: 1.5rem;
+    color: #fff; /* White */
+    transition: color 0.3s;
+}
+
+.content .intro span {
+    color: #5dade2; /* Sky blue */
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.content h1 {
+    font-size: 4rem;
+    color: #5dade2; /* Sky blue */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    transition: color 0.3s;
+}
+
+.content .detail {
+    font-size: 1.1rem;
+    color: #fff; /* White */
+    max-width: 38rem;
+    margin: 1.1rem 0 3rem 0;
+    line-height: 1.8rem;
+}
+
+.btn-container {
+    display: flex;
+    gap: 2rem; /* Adjust the gap between buttons */
+}
+
+.btn-container button {
+    border: 0.1rem solid #5dade2; /* Sky blue */
+    font-size: 1.1rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+button:nth-child(1) {
+    background: #5dade2; /* Sky blue */
+    color: #654ea3; /* Dark purple */
+    transform: skewX(-10deg);
+    transition: background 0.3s;
+}
+
+button:nth-child(2),
+button:nth-child(3) {
+    background: transparent;
+    color: #5dade2; /* Sky blue */
+    transform: skewX(-10deg);
+    transition: background 0.3s;
+}
+
+button:nth-child(1):hover {
+    background: #654ea3; /* Dark purple */
+    color: #5dade2; /* Sky blue */
+}
+
+button:nth-child(2):hover,
+button:nth-child(3):hover {
+    background: #5dade2; /* Sky blue */
+    color: #654ea3; /* Dark purple */
+}
+
+.design .square {
+    aspect-ratio: 1;
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+}
+
+.square:nth-child(1) {
+    background: linear-gradient(90deg, transparent 50%, #654ea3 50%); /* Gradient with dark purple and transparent */
+    width: 38rem;
+    transform: rotate(45deg);
+    transition: background 0.3s;
+}
+
+.square:nth-child(2) {
+    width: 30rem;
+    background-image: url("Screenshot\ 2024-01-14\ 215721.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border: 0.1rem solid white;
+    box-shadow: 0 0 1rem #fff, inset 0 0 1rem #fff, 0 0 2rem #5dade2, inset 0 0 2rem #5dade2, 0 0 4rem #5dade2, inset 0 0 4rem #5dade2;
+    transition: background 0.3s;
+}
+
+.navlist li a::after, .navlist .active::after {
+    content: "";
+    position: absolute;
+    background: #5dade2; /* Sky blue */
+    width: 100%;
+    height: 0.1rem;
+    left: 0;
+    bottom: -5px;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.5s;
+}
+
+.navlist li a:hover::after,
+.navlist.active::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+.footer {
+    background: #333; /* Dark background color for the footer */
+    color: #fff; /* Light text color */
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
